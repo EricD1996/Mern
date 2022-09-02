@@ -19,8 +19,8 @@ export class Counter extends Component{
         this.setState({
             count: count + step,
             clickTimes: [... clickTimes, new Date()],
-    });
-};
+        });
+    };
 
     render(){
         const {props, state, handledClickCount} = this;
