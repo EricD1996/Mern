@@ -13,7 +13,6 @@ var peopleArr = [
 function App() {
   return (
     <div className="App">
-
       {peopleArr.map(person => {
         return <PersonCard firstName={person.firstName} lastName={person.lastName} age={person.age} hairColor={person.hairColor}></PersonCard>
       })}
@@ -21,4 +20,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
