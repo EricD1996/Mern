@@ -1,6 +1,7 @@
 // import React, {useEffect, useState} from "react";
 import './App.css';
 import Pokemon from './components/pokemonapi'
+import Pokemon2 from './components/pokemonapi2'
 function App() {
   // const [pokemon, setPokemon] = useState([]);
   
@@ -15,7 +16,7 @@ function App() {
   
   
   return (
-      <Pokemon></Pokemon>
+    <Pokemon2></Pokemon2>
   );
 }
 
