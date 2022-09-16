@@ -25,6 +25,7 @@ export const NewProductManager = (props) => {
             })           
             .catch((error) => {
                 console.log(error);
+                setErrors(error?.response?.data?.errors);
             })
     }
 
@@ -35,18 +36,27 @@ export const NewProductManager = (props) => {
                 <input  type="text" onChange={(e) => {
                     setTitle(e.target.value);
                 }}  className="form-control"/>
+                {
+                    errors?.title && (<span style={{color: 'red'}}>{errors?.title?.message}</span>)
+                }
             </div>
             <div className="form-group">
                 <label className="h6">Price:</label>
                 <input  type="number" onChange={(e) => {
                     setPrice(e.target.value);
                 }}  className="form-control"/>
+                {
+                    errors?.price && (<span style={{color: 'red'}}>{errors?.price?.message}</span>)
+                }
             </div>
             <div className="form-group">
                 <label className="h6">Description:</label>
                 <input  type="text" onChange={(e) => {
                     setDescription(e.target.value);
                 }}  className="form-control"/>
+                {
+                    errors?.description && (<span style={{color: 'red'}}>{errors?.description?.message}</span>)
+                }
             </div>
             <button className="btn btn-sm btn-outline-success">Submit</button>
         </form>
