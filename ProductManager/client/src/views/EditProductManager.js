@@ -48,7 +48,7 @@ export const EditProductManager = (props) => {
             <label className="h6">Title:</label>
             <input  type="text" onChange={(e) => {
                 setTitle(e.target.value);
-            }}  className="form-control" value={title}/>
+            }}  className="form-control" value={title}/> 
         </div>
         <div className="form-group">
             <label className="h6">Price:</label>
